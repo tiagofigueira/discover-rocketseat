@@ -1,0 +1,32 @@
+<!--
+    <input type="color" />
+
+    - Interface para selecionar cor
+    - Color picker
+
+    # Atributos
+    - value: RGB
+        * Se inválido, o preto será exibido
+    - list
+        * o id de uma tag <datalist> que está no mesmo documento
+        * <datalist> irá conter uma lista de valores pré definidos a fim de
+        sugerir ao usuário, quais valores estão disponíveis
+            * Os valores do <datalist> que não forem compatíveis com o campo,
+            não serão apresentados como sugestão
+-->
+
+<form action="">
+    <input type="color" 
+        value="#ff0000"
+    >
+</form>
+
+<form action="">
+    <datalist id="colorsdatalist">
+        <option>#ff00aa</option>
+        <option>#000066</option>
+    </datalist>
+    <input type="color" 
+        list="colorsdatalist"
+    >
+</form>

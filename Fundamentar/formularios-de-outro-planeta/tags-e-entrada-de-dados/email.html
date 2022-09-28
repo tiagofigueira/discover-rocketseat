@@ -1,0 +1,128 @@
+<!--
+    <input type="email" />
+    
+    - Espera que o usuário digite um e-mail
+    - Irá validar se o valor digitado é um e-mail
+
+    # Atributos
+
+    - placeholder
+    - readonly /disabled
+    - value
+
+    - required
+
+    - multiple
+        * o campo irá receber 1 ou mais emails, separado por virgulas
+
+    - minlength / maxlength
+        * o mínimo e/ou máximo valor que o campo irá conter
+    - size
+        * valor numérico indicando quantos caracteres esse campo
+        irá conter
+    - pattern
+        * Uso de expressão regular para validar o campo
+        * Exemplo: o usuário só poderá colocar email 
+        do domínio rocketseat.com.br
+            * pattern="[.+@rocketseat\.com\.br]"
+    - list 
+        * o id de uma tag <datalist> que está no mesmo documento
+        * <datalist> irá conter uma lista de valores pré definidos 
+        a fim de sugerir ao usuário, quais valores estão disponíveis
+            * Os valores do <datalist> que não forem compatíveis
+            com o campo, não serão apresentados como sugestão
+        
+-->
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail readonly"
+        value="tiago.g.figueira@gmail.com"
+        readonly
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail disabled"
+        value="tiago.g.figueira@gmail.com"
+        disabled
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail value"
+        value="tiago.g.figueira@gmail.com"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail required"
+        required
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail multiple"
+        multiple
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail minlength"
+        minlength="8"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail maxlength"
+        maxlength="255"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email" 
+        placeholder="Digite seu e-mail maxlength"
+        size="25"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <input type="email"
+        placeholder="Email com pattern"
+        pattern="[.+@rocketseat\.com\.br]"
+        title="Somente e-mails rocketseat.com.br serão aceitos"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
+
+<form action="">
+    <datalist id="emailslist">
+        <option>tiago.tiago@rocketseat.com.br</option>
+    </datalist>
+    <input type="email" 
+        placeholder="Digite seu e-mail datalist"
+        list="emailslist"
+    >
+    <button type="submit">Enviar Formulário</button>
+</form>
